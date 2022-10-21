@@ -14,7 +14,7 @@ function start(client) {
   client.onMessage((message) => {
     if (message.body === 'Hi' && message.isGroupMsg === false) {
       client
-        .sendText(message.from, 'Hi, This is an automated chatbot reply.')
+        .sendText(message.from, 'Hi, This is an automated chatbot reply.\n\n:Try entering the following commands\nHi\nReally?\nWhat else can you do?')
         .then((result) => {
           console.log('Result: ', result); //return object success
         })
@@ -49,7 +49,7 @@ function start(client) {
 
     if ((message.body === 'menu'|| message.body === 'Menu') && message.isGroupMsg === false) {
       client
-        .sendText(message.from, 'Oops! Sorry. Menu is not supported yet I\'ll learn more at time passes by...🌔')
+        .sendText(message.from, 'Menu\n\n:Try entering the following commands\nHi\nReally?\nWhat else can you do?')
         .then((result) => {
           console.log('Result: ', result); //return object success
         })
